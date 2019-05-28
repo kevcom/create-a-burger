@@ -11,7 +11,7 @@ class Modal extends Component {
 	// only update this component if the 'show'
 	// property changes (ie when modal visibility is toggled)
 	shouldComponentUpdate(nextProps, nextState) {
-		return nextProps.show !== this.props.show;
+		return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
 	}
 
 	render() {
